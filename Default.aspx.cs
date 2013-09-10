@@ -16,7 +16,7 @@ public partial class _Default : System.Web.UI.Page
         if (values != null) {
             foreach (string key in values.Keys) {
                 for (int index = 0; index < values[key].Count; index++) {
-                    Response.Write("[\"" + key + "\"][" + index.ToString() + "] = \"" + values[key][index] + "\"<br>");
+                    output.InnerHtml += "[\"" + key + "\"][" + index.ToString() + "] = \"" + values[key][index] + "\"<br />";
                 }
             }
         }
